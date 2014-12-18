@@ -1,3 +1,3 @@
-<% if Message %>
-    <p class="message message-{$Type}">$Message</p>
+<% if $Message %>
+    <p class="message message-{$Type} {$ExtraClasses}">$Message</p>
 <% end_if %>

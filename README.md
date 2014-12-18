@@ -23,3 +23,23 @@ Once installed, you send a session message at any time using:
 You can then render messages into your template using the varible:
 
     $SessionMessage
+
+## Adding extra css classes to your message
+
+By default the message displays the classes "message" and "message-{$Type}"
+
+You can also add extra classes to the message (for custom styling) by
+using the following config variables:
+
+    SessionMessengerController.extra_classes
+    SessionMessengerController.success_classes
+    SessionMessengerController.error_classes
+    SessionMessengerController.info_classes
+    
+Extra Classes adds the classes you specify to all versions of the message
+
+Success Classes adds the classes only when the message's type is set to "success"
+
+Error Classes adds the classes only when the message's type is set to "error"
+
+Info Classes adds the classes only when the message's type is set to "info"

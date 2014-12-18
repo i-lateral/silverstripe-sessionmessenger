@@ -1,8 +1,10 @@
 <?php
+
 /**
  * Add additional methods to controller
  *
- * @author morven
+ * @author ilateral http://www.ilateral.co.uk
+ * @package SessionMessenger
  */
 class SessionMessengerController extends Extension {
 
@@ -14,15 +16,39 @@ class SessionMessengerController extends Extension {
      * - success: Rendered green
      * - error: Rendered red
      * - info: Rendered blue
+     * 
+     * This method also collects extra classes and any classes that
+     * apply to the type of message set and send them to the template
      *
      * @param $type Type of message
      * @param $message message to send
      * @return Controller
      */
     public function setSessionMessage($type, $message) {
+        $extra_classes = SessionMessenger::config()->extra_classes;
+        
+        if($type == "success")
+            $type_classes = SessionMessenger::config()->success_classes;
+        elseif($type == "error")
+            $type_classes = SessionMessenger::config()->error_classes;
+        elseif($type == "info")
+            $type_classes = SessionMessenger::config()->info_classes;
+        else
+            $type_classes = "";
+            
+        if($extra_classes && $type_classes)
+            $classes = $extra_classes . " " . $type_classes;
+        elseif($extra_classes && !$type_classes)
+            $classes = $extra_classes;
+        elseif(!$extra_classes && $type_classes)
+            $classes = $type_classes;
+        else
+            $classes = "";
+        
         Session::set('Site.Message', array(
-            'Type' => $type,
-            'Message' => $message
+            "Type" => $type,
+            "ExtraClasses" => $classes,
+            "Message" => $message
         ));
 
         return $this;
