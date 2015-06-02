@@ -27,9 +27,9 @@ class SessionMessengerController extends Extension {
     public function setSessionMessage($type, $message) {
         $extra_classes = SessionMessenger::config()->extra_classes;
         
-        if($type == "success")
+        if($type == "success" || $type == "good")
             $type_classes = SessionMessenger::config()->success_classes;
-        elseif($type == "error")
+        elseif($type == "error" || $type == "bad")
             $type_classes = SessionMessenger::config()->error_classes;
         elseif($type == "info")
             $type_classes = SessionMessenger::config()->info_classes;
