@@ -31,10 +31,10 @@ By default the message displays the classes "message" and "message-{$Type}"
 You can also add extra classes to the message (for custom styling) by
 using the following config variables:
 
-    SessionMessengerController.extra_classes
-    SessionMessengerController.success_classes
-    SessionMessengerController.error_classes
-    SessionMessengerController.info_classes
+    SessionMessenger.extra_classes
+    SessionMessenger.success_classes
+    SessionMessenger.error_classes
+    SessionMessenger.info_classes
     
 Extra Classes adds the classes you specify to all versions of the message
 
