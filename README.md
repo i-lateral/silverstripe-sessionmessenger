@@ -18,7 +18,7 @@ Or alternativly add to your projects composer.json
 ## Usage
 Once installed, you send a session message at any time using:
 
-    Controller->setSessionMessage("success","Message text");
+    Controller->setSessionMessage("success", "Message text");
 
 You can then render messages into your template using the varible:
 
