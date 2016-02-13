@@ -35,7 +35,7 @@ using the following config variables:
     SessionMessenger.success_classes
     SessionMessenger.error_classes
     SessionMessenger.info_classes
-    
+
 Extra Classes adds the classes you specify to all versions of the message
 
 Success Classes adds the classes only when the message's type is set to "success"
