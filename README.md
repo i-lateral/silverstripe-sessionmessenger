@@ -18,7 +18,7 @@ Or alternativly add to your projects composer.json
 ## Usage
 Once installed, you send a session message at any time using:
 
-    Controller->setSessionMessage("success","Message text");
+    Controller->setSessionMessage("success", "Message text");
 
 You can then render messages into your template using the varible:
 
@@ -31,10 +31,10 @@ By default the message displays the classes "message" and "message-{$Type}"
 You can also add extra classes to the message (for custom styling) by
 using the following config variables:
 
-    SessionMessengerController.extra_classes
-    SessionMessengerController.success_classes
-    SessionMessengerController.error_classes
-    SessionMessengerController.info_classes
+    SessionMessenger.extra_classes
+    SessionMessenger.success_classes
+    SessionMessenger.error_classes
+    SessionMessenger.info_classes
     
 Extra Classes adds the classes you specify to all versions of the message
 
