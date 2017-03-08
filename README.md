@@ -1,6 +1,8 @@
 Silverstripe Session Messanger
 ==============================
 
+![Travis Support](https://travis-ci.org/i-lateral/silverstripe-sessionmessenger.svg?branch=master)
+
 Session based messaging module for Silverstripe (framework and CMS).
 
 ## Author
