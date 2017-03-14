@@ -6,8 +6,8 @@
  * @author ilateral http://www.ilateral.co.uk
  * @package SessionMessenger
  */
-class SessionMessengerController extends Extension {
-
+class SessionMessengerController extends Extension
+{
     /**
      * Set a flash message that will appear in your templates
      *
@@ -24,26 +24,29 @@ class SessionMessengerController extends Extension {
      * @param $message message to send
      * @return Controller
      */
-    public function setSessionMessage($type, $message) {
+    public function setSessionMessage($type, $message)
+    {
         $extra_classes = SessionMessenger::config()->extra_classes;
 
-        if($type == "success" || $type == "good")
+        if ($type == "success" || $type == "good") {
             $type_classes = SessionMessenger::config()->success_classes;
-        elseif($type == "error" || $type == "bad")
+        } elseif ($type == "error" || $type == "bad") {
             $type_classes = SessionMessenger::config()->error_classes;
-        elseif($type == "info")
+        } elseif ($type == "info") {
             $type_classes = SessionMessenger::config()->info_classes;
-        else
+        } else {
             $type_classes = "";
+        }
 
-        if($extra_classes && $type_classes)
+        if ($extra_classes && $type_classes) {
             $classes = $extra_classes . " " . $type_classes;
-        elseif($extra_classes && !$type_classes)
+        } elseif ($extra_classes && !$type_classes) {
             $classes = $extra_classes;
-        elseif(!$extra_classes && $type_classes)
+        } elseif (!$extra_classes && $type_classes) {
             $classes = $type_classes;
-        else
+        } else {
             $classes = "";
+        }
 
         Session::set('Site.Message', array(
             "Type" => $type,
@@ -59,8 +62,9 @@ class SessionMessengerController extends Extension {
      *
      * @return String
      */
-    public function getSessionMessage() {
-        if($message = Session::get('Site.Message')){
+    public function getSessionMessage()
+    {
+        if ($message = Session::get('Site.Message')) {
             Session::clear('Site.Message');
             $array = new ArrayData($message);
             return $array->renderWith('SessionMessage');

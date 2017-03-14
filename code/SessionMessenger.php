@@ -6,8 +6,8 @@
  * @author ilateral http://www.ilateral.co.uk
  * @package SessionMessenger
  */
-class SessionMessenger extends Object {
-
+class SessionMessenger extends Object
+{
     /**
      * Extra css classes that can will be loaded to all messages
      *
@@ -39,5 +39,4 @@ class SessionMessenger extends Object {
      * @config
      */
     private static $info_classes;
-
 }
