@@ -16,7 +16,7 @@ class SessionMessengerController extends Extension {
      * - success: Rendered green
      * - error: Rendered red
      * - info: Rendered blue
-     * 
+     *
      * This method also collects extra classes and any classes that
      * apply to the type of message set and send them to the template
      *
@@ -26,7 +26,7 @@ class SessionMessengerController extends Extension {
      */
     public function setSessionMessage($type, $message) {
         $extra_classes = SessionMessenger::config()->extra_classes;
-        
+
         if($type == "success" || $type == "good")
             $type_classes = SessionMessenger::config()->success_classes;
         elseif($type == "error" || $type == "bad")
@@ -35,7 +35,7 @@ class SessionMessengerController extends Extension {
             $type_classes = SessionMessenger::config()->info_classes;
         else
             $type_classes = "";
-            
+
         if($extra_classes && $type_classes)
             $classes = $extra_classes . " " . $type_classes;
         elseif($extra_classes && !$type_classes)
@@ -44,7 +44,7 @@ class SessionMessengerController extends Extension {
             $classes = $type_classes;
         else
             $classes = "";
-        
+
         Session::set('Site.Message', array(
             "Type" => $type,
             "ExtraClasses" => $classes,
