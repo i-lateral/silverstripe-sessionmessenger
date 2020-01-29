@@ -6,7 +6,7 @@
  * @author ilateral http://www.ilateral.co.uk
  * @package SessionMessenger
  */
-class SessionMessenger extends Object
+class SessionMessenger extends SS_Object
 {
     /**
      * Extra css classes that can will be loaded to all messages
