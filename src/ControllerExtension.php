@@ -11,7 +11,7 @@ use SilverStripe\Control\Controller;
  * @author ilateral http://www.ilateral.co.uk
  * @package SessionMessenger
  */
-class SessionMessengerController extends Extension
+class ControllerExtension extends Extension
 {
     public function getSessionMessager()
     {
