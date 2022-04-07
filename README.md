@@ -5,6 +5,8 @@ Silverstripe Session Messanger
 
 A simple module that allows adding and rendering of Session based messages to a SilverStripe Controller.
 
+**NOTE** v2.* is for SilverStripe 4, for the SilverStripe 3 version, use v1.*
+
 ## Author
 
 This module was created by [i-lateral](http://www.ilateral.co.uk).
