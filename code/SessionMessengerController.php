@@ -40,10 +40,10 @@ class SessionMessengerController extends Extension
      *
      * @return String
      */
-    public function getSessionMessage()
+    public function getSessionMessage($name = SessionMessenger::DEFAULT_NAME)
     {
         /** @var SessionMessenger */
         $messenger = $this->getOwner()->getSessionMessager();
-        return $messenger->getSessionMessage();
+        return $messenger->getSessionMessage($name);
     }
 }
