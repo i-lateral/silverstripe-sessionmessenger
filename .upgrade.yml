@@ -1,0 +1,3 @@
+mappings:
+  SessionMessenger: ilateral\SilverStripe\SessionMessenger\SessionMessenger
+  SessionMessengerController: ilateral\SilverStripe\SessionMessenger\ControllerExtension
