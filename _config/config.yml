@@ -1,5 +1,5 @@
 ---
-name: custommenus
+name: sessionmessengerconfig
 ---
 SilverStripe\Control\Controller:
   extensions:
